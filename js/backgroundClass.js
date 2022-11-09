@@ -12,11 +12,11 @@ class Background {
     this.width = w;
     this.height = h;
     this.image_side_a = new Image();
-    this.image_side_a.src = 'images/infinite_sky_a.png';
+    this.image_side_a.src = '/images/infinite_sky_a.png';
     this.image_side_b = new Image();
-    this.image_side_b.src = 'images/infinite_sky_b.png';
+    this.image_side_b.src = '/images/infinite_sky_b.png';
     this.image_side_c = new Image();
-    this.image_side_c.src = 'images/infinite_sky_c.png';
+    this.image_side_c.src = '/images/infinite_sky_c.png';
   }
 
   draw() {
