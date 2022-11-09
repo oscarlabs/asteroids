@@ -276,7 +276,7 @@ window.onload = function () {
 };
 
 const defaultImg = new Image();
-defaultImg.src = '../images/infinite_sky_a.png';
+defaultImg.src = 'images/infinite_sky_a.png';
 defaultImg.onload = function () {
   canvas.width = defaultImg.width;
   canvas.height = defaultImg.height;
