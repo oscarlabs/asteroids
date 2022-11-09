@@ -14,7 +14,7 @@ class Hero {
     this.height = h;
     this.speed = s;
     this.image = new Image();
-    this.image.src = 'images/superman2d.png';
+    this.image.src = './images/superman2d.png';
   }
 
   draw() {
