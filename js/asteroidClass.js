@@ -14,7 +14,7 @@ class Asteroid {
     this.height = h;
     this.speed = s;
     this.image = new Image();
-    this.image.src = '../images/asteroid.png';
+    this.image.src = './images/asteroid.png';
   }
 
   draw() {

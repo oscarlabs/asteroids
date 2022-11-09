@@ -195,22 +195,22 @@ hr {
   }
 
   .pad-button-up {
-    background-image: url('/images/up-arrow.png');
+    background-image: url('./images/up-arrow.png');
     background-size: cover;
   }
 
   .pad-button-left {
-    background-image: url('/images/left-arrow.png');
+    background-image: url('./images/left-arrow.png');
     background-size: cover;
   }
 
   .pad-button-right {
-    background-image: url('/images/right-arrow.jpg');
+    background-image: url('./images/right-arrow.jpg');
     background-size: cover;
   }
 
   .pad-button-down {
-    background-image: url('/images/down-arrow.png');
+    background-image: url('./images/down-arrow.png');
     background-size: cover;
   }
 
