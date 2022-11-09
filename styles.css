@@ -1,0 +1,238 @@
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 10px;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+#canvas-placeholder {
+  display: block;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#canvas-holder {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  padding: 0;
+  margin: 0;
+  height: 85vh;
+  max-height: 712px;
+}
+
+.game-alert {
+  display: none;
+}
+
+.game-alert-layer {
+  position: absolute;
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.game-alert-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.game-alert-message {
+  display: none;
+  width: 90%;
+  max-width: 300px;
+  height: 90%;
+  max-height: 300px;
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px;
+  border-radius: 10px;
+  z-index: 300;
+}
+
+.game-over {
+  background-color: blueviolet;
+}
+
+.game-welcome {
+  background-color: greenyellow;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  border: solid white;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  margin: 0 15px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10px;
+  z-index: -2;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  transition: all 0.3s;
+  border-radius: 10px;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.button:hover:before {
+  width: 100%;
+}
+
+.virtual-pad,
+.virtual-pad-fire {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .virtual-pad-fire {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .virtual-pad-fire-button {
+    width: 70px;
+    height: 70px;
+    border: solid 5px gray;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    background-color: #ef233c;
+    opacity: 0.5;
+  }
+
+  .virtual-pad {
+    position: absolute;
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    bottom: 5px;
+  }
+
+  .virtual-pad > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.5;
+  }
+
+  .virtual-pad-button {
+    width: 50px;
+    height: 50px;
+    border: solid 1px gray;
+    border-radius: 5px;
+  }
+
+  .pad-button-up {
+    background-image: url('/images/up-arrow.png');
+    background-size: cover;
+  }
+
+  .pad-button-left {
+    background-image: url('/images/left-arrow.png');
+    background-size: cover;
+  }
+
+  .pad-button-right {
+    background-image: url('/images/right-arrow.jpg');
+    background-size: cover;
+  }
+
+  .pad-button-down {
+    background-image: url('/images/down-arrow.png');
+    background-size: cover;
+  }
+
+  .superman-left {
+    display: none;
+  }
+  .superman-right {
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  .superman-left {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    max-width: 400px;
+  }
+  .superman-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    max-width: 400px;
+  }
+}
