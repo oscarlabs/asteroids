@@ -67,12 +67,14 @@ window.onload = function () {
 
   buttonFire.addEventListener('touchstart', () => {
     power = 1;
+    myLaserAudio.play();
     buttonFire.style.width = '80px';
     buttonFire.style.height = '80px';
   });
 
   buttonFire.addEventListener('touchend', () => {
     power = 0;
+    myLaserAudio.pause();
     resetControlPadButtons();
   });
 
@@ -114,12 +116,29 @@ window.onload = function () {
     if (requestId === undefined) {
       gameAlert.style.display = 'none';
       gameWelcome.style.display = 'none';
+      myBackgroundAudio.play();
       requestId = requestAnimationFrame(animate);
       gameMode = 1;
     }
   }
 
+  function pause() {
+    if (gameMode === 1) {
+      gameMode = 2;
+      myBackgroundAudio.pause();
+      gameAlert.style.display = 'block';
+      gamePaused.style.display = 'block';
+    } else if (gameMode === 2) {
+      gameMode = 1;
+      myBackgroundAudio.play();
+      gameAlert.style.display = 'none';
+      gamePaused.style.display = 'none';
+      animate();
+    }
+  }
+
   function stop() {
+    myBackgroundAudio.pause();
     gameAlert.style.display = 'block';
     gameOver.style.display = 'block';
     gameMode = 3;
@@ -230,6 +249,7 @@ window.onload = function () {
           break;
         case 'Space':
           power = 1;
+          myLaserAudio.play();
           if (mana > 0) mana -= 5;
         default:
           break;
@@ -258,6 +278,7 @@ window.onload = function () {
           moveDown = 0;
           break;
         case 'Space':
+          myLaserAudio.pause();
           power = 0;
         default:
           break;
@@ -267,16 +288,7 @@ window.onload = function () {
 
   addEventListener('keypress', ({ code }) => {
     if (code === 'Enter') {
-      if (gameMode === 1) {
-        gameMode = 2;
-        gameAlert.style.display = 'block';
-        gamePaused.style.display = 'block';
-      } else if (gameMode === 2) {
-        gameMode = 1;
-        gameAlert.style.display = 'none';
-        gamePaused.style.display = 'none';
-        animate();
-      }
+      pause();
     }
   });
 };
