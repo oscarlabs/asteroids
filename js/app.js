@@ -96,6 +96,7 @@ window.onload = function () {
   const gameAlert = document.getElementById('game-alert');
   const gameOver = document.getElementById('game-over');
   const gameWelcome = document.getElementById('game-welcome');
+  const gamePaused = document.getElementById('game-paused');
 
   gameAlert.style.display = 'block';
   gameWelcome.style.display = 'block';
@@ -266,9 +267,14 @@ window.onload = function () {
 
   addEventListener('keypress', ({ code }) => {
     if (code === 'Enter') {
-      if (gameMode === 1) gameMode = 2;
-      else if (gameMode === 2) {
+      if (gameMode === 1) {
+        gameMode = 2;
+        gameAlert.style.display = 'block';
+        gamePaused.style.display = 'block';
+      } else if (gameMode === 2) {
         gameMode = 1;
+        gameAlert.style.display = 'none';
+        gamePaused.style.display = 'none';
         animate();
       }
     }

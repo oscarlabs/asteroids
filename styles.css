@@ -70,14 +70,12 @@ canvas {
 .game-alert-message {
   display: none;
   width: 90%;
-  max-width: 300px;
+  max-width: 350px;
   height: 90%;
-  max-height: 300px;
+  max-height: 500px;
   position: absolute;
-  top: 50%;
-  margin-top: -150px;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -175px;
   border-radius: 10px;
   z-index: 300;
 }
@@ -90,12 +88,50 @@ canvas {
   background-color: greenyellow;
 }
 
-.text-center {
-  text-align: center;
+.game-paused {
+  background-color: #4c4c4c;
 }
 
 hr {
   border: solid white;
+}
+
+.fun-title-text {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.fun-body-text {
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 3px;
+}
+
+.fun-body-text > .row {
+  font-size: 24px;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.fun-body-text > .row > div {
+  font-size: 22px;
+}
+
+.font-16 * {
+  font-size: 14px !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 .button {
@@ -220,6 +256,11 @@ hr {
   .superman-right {
     display: none;
   }
+
+  .game-alert-message {
+    top: 50%;
+    margin-top: -250px;
+  }
 }
 
 @media (min-width: 961px) {
@@ -234,5 +275,9 @@ hr {
     right: 10px;
     top: 10px;
     max-width: 400px;
+  }
+
+  .game-alert-message {
+    top: 70px;
   }
 }

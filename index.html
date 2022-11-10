@@ -56,12 +56,12 @@
         <article class="game-alert-layer"></article>
         <article class="game-alert-window">
           <div class="game-alert-message game-over" id="game-over">
-            <div class="text-center">
+            <div class="text-center fun-title-text">
               YOU LOSE
               <hr />
             </div>
 
-            <div>
+            <div class="fun-body-text"></div>
               <div>GAME OVER</div>
               <div>
                 <button id="finish">QUIT</button>
@@ -69,21 +69,72 @@
               </div>
             </div>
           </div>
-        </article>
 
-        <div class="game-alert-message game-welcome" id="game-welcome">
-          <div class="text-center">
-            WELCOME
-            <hr />
-          </div>
+          <div class="game-alert-message game-welcome" id="game-welcome">
+            <div class="fun-body-text font-16">
+              <div class="row text-center"><div>IT's TIME TO SAVE THE EARTH!</div></div>
+              <div class="row">A group of evil asteriods are about to hit the Earth. We need 
+                your support to save millions of millions of lives. You're our last hope, and 
+                we trust you our lives and our children's lives. Come rescue us!
+              </div>              
+              <div class="row">
+                TO PLAY
+                </div>
 
-          <div>
-            <div>IT's TIME TO SAVE EARTH!</div>
-            <div>
-              <a class="button" id="start">START</a>
+              <div class="row">
+                <div>
+                    <img src="./images/joystick.png" width="40px" />
+                </div> 
+                <div>In mobile devices you can use the virtual game pad.</div>
+            </div>
+                <div class="row">In desktop devices</div>
+                <div class="row">
+                    <div><img src="./images/key_up.png" width="40px" /></div>
+                    <div>To move the hero towards the asteroids. Be carefull not to touch them. They're made of Kryptonite and that could kill you</div>
+                </div>
+                <div class="row">
+                    <div><img src="./images/key_left.png" width="40px" /></div>
+                    <div>To move the hero to the left</div>
+                </div>
+                <div class="row">
+                    <div><img src="./images/key_right.png" width="40px" /></div>
+                    <div>To move the hero to the right</div>
+                </div>
+                <div class="row">
+                    <div><img src="./images/key_down.png" width="40px" /></div>
+                    <div>To use your laser vision super power. Do not use all your mana! and wait for it to let them recover</div>
+                </div>
+                
+                <div class="row text-center">
+
+                <a class="button" id="start">START</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div class="game-alert-message game-paused" id="game-paused">
+            <div class="text-center fun-title-text">
+              *** ASTEROIDS ***
+              <hr />
+            </div>
+
+            <div class="fun-body-text">
+              <div class="row">GAME PAUSED</div>
+              <div class="row">
+                <div>
+                    <img src="./images/key_enter.png" width="40px" alt="" />
+                  </div>
+                <div>&nbsp;PRESS ENTER TO RESUME</div>
+              </div>
+              <div class="row">
+                <div>
+                    <img src="./images/supermanwaiting.jpeg" width="300px" alt="" />
+                  </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
     <footer></footer>
