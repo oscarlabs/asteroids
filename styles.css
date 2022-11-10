@@ -81,7 +81,9 @@ canvas {
 }
 
 .game-over {
-  background-color: blueviolet;
+  background-color: #150050;
+  color: #ffffff;
+  padding: 15px 0;
 }
 
 .game-welcome {
