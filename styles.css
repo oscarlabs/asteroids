@@ -22,6 +22,10 @@ section {
   margin: 0;
 }
 
+footer {
+  display: none;
+}
+
 #canvas-placeholder {
   display: block;
   padding: 0;
